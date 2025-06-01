@@ -63,13 +63,16 @@ const ProductCard = ({ product }) => {
 
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between"
-      whileHover={{ y: -5 }}
+      className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between group"
+      whileHover={{ y: -5, scale: 1.03 }}
       transition={{ duration: 0.2 }}
     >
       <Link to={`/product/${product.id}`} className="block">
-        <div className="w-full h-48 bg-gray-200">
-          <img  alt={product.name} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1675023112817-52b789fd2ef0" />
+        <div className="w-full h-48 bg-gray-200 overflow-hidden relative">
+          <img  alt={product.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1675023112817-52b789fd2ef0" />
+          <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span className="text-white text-sm font-semibold">Lihat Detail</span>
+          </div>
         </div>
         <div className="p-4">
           <h3 className="text-lg font-semibold text-[#4A2C1A] mb-1 h-12 overflow-hidden">{product.name}</h3>

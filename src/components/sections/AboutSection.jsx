@@ -17,10 +17,11 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.03 }}
           >
             <img  
               alt="Tim Dapur Azka Qanita sedang memasak" 
-              className="rounded-lg shadow-xl w-full h-auto max-h-[400px] object-cover"
+              className="rounded-lg shadow-xl w-full h-auto max-h-[400px] object-cover transition-transform duration-300"
              src="https://images.unsplash.com/photo-1535743152831-b30477188917" />
           </motion.div>
           <motion.div 
@@ -29,6 +30,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            whileHover={{ scale: 1.03 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#4A2C1A] mb-6">Tentang Dapur Azka Qanita</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">

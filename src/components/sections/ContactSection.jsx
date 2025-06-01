@@ -43,6 +43,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.03 }}
           >
             <h3 className="text-2xl font-semibold text-[#4A2C1A] mb-6">Informasi Kontak</h3>
             <div className="space-y-4 text-gray-700">
@@ -79,11 +80,12 @@ const ContactSection = () => {
           </motion.div>
 
           <motion.div
-            className="lg:w-2/3"
+            className="lg:w-2/3 bg-white p-8 rounded-lg shadow-lg"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            whileHover={{ scale: 1.03 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
